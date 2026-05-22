@@ -2,6 +2,10 @@
 
 Hardware-entropy password generator in C++.
 
+## Download
+
+Grab the latest `.exe` from the [Releases page](https://github.com/Reak-ps/PassGen/releases/tag/1.3) – no compiler needed, just run it.
+
 ## Build
 ### bash g++ -std=c++17 main.cpp -o passgen
 
