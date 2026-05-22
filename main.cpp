@@ -72,10 +72,14 @@ int main() {
     std::string command = "echo " + password + " | clip";
     system(command.c_str());
 
-    std::ofstream outfile;
-    outfile.open("password.txt");
-    outfile << password;
-    outfile.close();
+        std::ofstream outfile;
+        outfile.open("password.txt", std::ios::app);
+        outfile << password << "\n";       // <-- DAS fehlt
+        outfile << "----------\n";
+        outfile.close();                    // <-- Auch wichtig!
     }
+    std::cout << "\nPress enter to close...";
+    std::cin.ignore();
+    std::cin.get();
     return 0;
 }
